@@ -123,3 +123,9 @@ test: int 0xffffffff-> Unt64:0xffffffffffffffff
 
 </pre>
 this is all.
+
+Consideration:
+this is a opinion, so please notice if mistaken.
+1. bit expansion is natural, so user would better to use logand mask.
+2. you could control bit width in operation explicitly, so you would handle as intended.
+Sincerly.
