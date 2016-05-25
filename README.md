@@ -91,4 +91,35 @@ let _ =
 
 
 </pre>
+then type bellow:
+ocaml test.ml
+<pre>
+$ ocaml main.ml
+org hex in  Uint32.of_int:0xffffffff
+org hex in  Uint64.of_int:0xffffffffffffffff
+test: int 0x00000000ffffffff -> to_uint64:0xffffffffffffffff
+test: int 0x00000000ffffffff -> uint16:0xffff
+test: int 0x00000000ffffffff -> of_int:0xffffffffffffffff
+test: int 0x000000ffffffffff -> of_int:0xffffffffffffffff
+test: int 0x0000ffffffffffff -> of_int:0xffffffffffffffff
+test: int 0x00ffffffffffffff -> of_int:0xffffffffffffffff
+test: int 0x0fffffffffffffff -> of_int:0xffffffffffffffff
+test: int 0x00000000ffffffff -> Unt64:0xffffffffffffffff
+test: int 0x00000000ffffffff -> of_int:0xffffffffffffffff
+test: int 0xffff-> Unt64:0xffff
+test: int 0xffffffff-> Unt64:0xffffffffffffffff
+18446744073709551615
+18446744073709551612
+0xfffffffffffffffc
+18446744073709551600
+0xfffffffffffffff0
+18446744073709551360
+0xffffffffffffff00
+18446744073709486080
+0xffffffffffff0000
+18446744069414584320
+0xffffffff00000000
+0xffffffffffffffff
 
+</pre>
+this is all.
